@@ -5,6 +5,9 @@
     --gris: #94a3b8;
     --gris-oscuro: #64748b;
     --negro: #000;
+    --purple: #ac88be;
+    --lilac: #e6d1f0;
+    --ghostwhite: #f8f8ff;
 }
 
 body {
@@ -12,7 +15,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     /* background-color: #fff7eb; */
-    background-color: var(--gris-claro);
+    background-color: var(--blanco);
 }
 html {
     font-size: 50%;
@@ -31,31 +34,30 @@ html {
 
 h1 {
     font-size: 4rem;
+    font-weight: lighter;
 }
 h2 {
     font-size: 3rem;
 }
 
-.sombra {
+/* .sombra {
     box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     background-color: var(--blanco);
     padding: 4rem;
     border-radius: 1.2rem;
-}
+} */
 
 header {
-    background-color: var(--azul);
+    background-color: var(--ghostwhite);
 }
 
 header h1 {
     padding: 3rem 0;
     margin: 0;
-    color: var(--blanco);
+    color: var(--purple);
     text-align: center;
-
-    text-transform: uppercase;
 }
 
 .formulario {
@@ -77,7 +79,7 @@ header h1 {
     color: var(--blanco);
     margin-bottom: 4rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--azul);
+    border-bottom: 2px solid var(--blanco);
 }
 .formulario .campo {
     display: grid;
@@ -85,7 +87,7 @@ header h1 {
 }
 
 .formulario label {
-    color: var(--azul);
+    color: var(--purple);
     font-size: 2.8rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -101,15 +103,16 @@ header h1 {
     font-size: 1.6rem;
 }
 .formulario input[type="submit"] {
-    background-color: #1048a4;
-    border: none;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-    color: var(--blanco);
-    font-weight: 900;
+    background-color: var(--purple);
+    padding: 10px;
+    color: white;
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    font-size: 1.9rem;
+    letter-spacing: 5px;
+    font-weight: 300;
+    border-radius: 3px;
+
+    margin-top: 2rem;
     width: 100%;
     transition: background-color 300ms ease;
 }
@@ -156,12 +159,12 @@ header h1 {
     margin: 0 auto;
 }
 .contenedor-presupuesto {
-    margin-top: -5rem;
-
+    background-color: white;
+    padding: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    border: 1px solid black;
     transform: translateY(5rem);
 }
 .dos-columnas {
@@ -213,24 +216,27 @@ header h1 {
 }
 .contenido-presupuesto span {
     font-weight: 900;
-    color: var(--azul);
+    color: var(--purple);
 }
 .reset-app {
-    border: none;
-    background-color: #db2777;
-    padding: 1rem;
     width: 100%;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     text-align: center;
-    color: var(--blanco);
+    letter-spacing: 5px;
     text-transform: uppercase;
-    font-weight: 900;
-    border-radius: 1rem;
+    color: white;
+    background-color: var(--purple);
+    border: 0;
+    border-radius: 0px;
     transition-property: background-color;
     transition-duration: 300ms;
 }
 .reset-app:hover {
-    background-color: #c71465;
+    background-color: #d70000;
     cursor: pointer;
+    color: var(--blanco)
 }
 
 main {
@@ -268,13 +274,15 @@ main {
     font-size: 2.2rem;
 }
 
-.gasto {
+.gastos {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
+    padding: 2.5rem;
+    border: 1px solid black;
 }
 
 .cantidad-gasto {
@@ -290,7 +298,7 @@ main {
 }
 
 .contenido-gasto img {
-    width: 10rem;
+    width: 8rem;
 }
 
 .descripcion-gasto p {
@@ -299,16 +307,19 @@ main {
 .descripcion-gasto .categoria {
     color: var(--gris);
     font-size: 1.6rem;
-    font-weight: 900;
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
 }
 .descripcion-gasto p {
     margin-bottom: 1rem;
 }
 .descripcion-gasto .nombre-gasto {
-    color: var(--gris-oscuro);
+    color: var(--purple);
     font-size: 2.4rem;
-    font-weight: 700;
+    font-weight: 300;
+    text-transform: capitalize;
 }
 .descripcion-gasto .nombre-gasto:hover {
     cursor: pointer;
@@ -388,13 +399,13 @@ body .modal {
 
 /*** SWIPE LIST OVERRIDES **/
 .swipe-action__leading {
-    background-color: var(--azul);
+    background-color: var(--purple);
     color: var(--blanco);
     margin-bottom: 2rem;
 }
 
 .swipe-action__trailing {
-    background-color: #db2777;
+    background-color: #d70000;
     margin-bottom: 2rem;
     color: var(--blanco);
 }

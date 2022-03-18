@@ -2,7 +2,7 @@ import Expense from "./Expense"
 
 const ExpenseList = ({expenses, setEditExpense, deleteExpense, filter, filteredExpenses}) => {
   return (
-    <div className="listado-gastos contenedor">
+    <div className="listado-gastos contenedor sombra">
      
 
       { //si hay un filtro definido, y comprobamos si hay algo en los gastos filtrados, iteramos sobre filteredExpenses

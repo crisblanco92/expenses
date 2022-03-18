@@ -10,13 +10,13 @@ import 'react-swipeable-list/dist/styles.css'
 
 import {formatDate} from '../helpers'
 
-import ClayIcon from '../img/icono_ahorro.svg'
-import ClassesIcon from '../img/icono_casa.svg'
-import WebsiteIcon from '../img/icono_comida.svg'
-import BrandingIcon from '../img/icono_gastos.svg'
-import KilnIcon from '../img/icono_ocio.svg'
-import MiscIcon from '../img/icono_salud.svg'
-import SuscIcon from '../img/icono_suscripciones.svg'
+import ClayIcon from '../img/clay.png'
+import ClassesIcon from '../img/classes.png'
+import WebsiteIcon from '../img/website.png'
+import BrandingIcon from '../img/branding.png'
+import KilnIcon from '../img/kiln.png'
+import MiscIcon from '../img/misc.png'
+import SuscIcon from '../img/subscription.png'
 
 const iconLibrary = {
     clay: ClayIcon,
@@ -45,7 +45,7 @@ const Expense = ({exp, setEditExpense, deleteExpense}) => {
         onClick={()=> deleteExpense(id)}
         destructive={true}
       >
-        Eliminar
+        Delete
       </SwipeAction>
     </TrailingActions>
   )
@@ -56,7 +56,7 @@ const Expense = ({exp, setEditExpense, deleteExpense}) => {
         leadingActions={leadingActions()}
         trailingActions={trailingActions()}
       >
-        <div className="gasto sombra">
+        <div className="gastos">
           <div className="contenido-gasto">
               <img 
                 src={iconLibrary[category]} //al poner aqui que muestre la categoria del array, escribira ej. 'clay', entonces ira a clay y pintara el clay icon

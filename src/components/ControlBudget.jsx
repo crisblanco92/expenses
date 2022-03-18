@@ -32,7 +32,7 @@ const formatQuantity = (qty) => {
     })
 }
 
-//resetea la app al hacer click en el boton, gracias al useEffect que dice que si expenses o budget cambia, lo sincroniza con el state
+//resetea la app al hacer click en el boton, gracias al useEffect que dice que si expenses o budget cambia, lo sincroniza con
 const handleResetApp = () => {
     const result = confirm('Are you sure?')
     if (result) {
@@ -52,7 +52,7 @@ return (
                 textColor: porcentaje > 100 ? '#DC2626' : '#ac88be'
             })}
             value={porcentaje}
-            text={`${porcentaje}% gastado`}
+            text={`${porcentaje}% spent`}
         />
     </div>
     <div className="contenido-presupuesto">
