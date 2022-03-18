@@ -20,13 +20,13 @@ const Header = ({
           setExpenses={setExpenses}
           budget={budget}
           setBudget={setBudget}
-          setIsValidBudget={setIsValidBudget} //lo paso para poder reiniciar la grafica a 0 con el boton
+          setIsValidBudget={setIsValidBudget} 
         />
       ) : (
         <NewExpense
             budget={budget}
             setBudget={setBudget}
-            setIsValidBudget={setIsValidBudget} //NewExpense solo requiere la funcion que modifica
+            setIsValidBudget={setIsValidBudget} 
         />
       )}
      

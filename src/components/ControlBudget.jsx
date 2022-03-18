@@ -10,7 +10,7 @@ const [available, setAvailable] = useState(0)
 const [spent, setSpent] = useState(0)
 
 useEffect(() => {
-    const totalSpent = expenses.reduce((total, exp) => exp.qty + total, 0) //toma un acumulado(total) y la instancia (exp). va a ir acumulado el exp.qty en el total, y el valor donde va a iniciar que es 0 
+    const totalSpent = expenses.reduce((total, exp) => exp.qty + total, 0) 
     const totalAvailable = budget - totalSpent
 
     //calcular porcentaje gastado
@@ -24,7 +24,6 @@ useEffect(() => {
     }, 1500);
 }, [expenses])
 
-//RECUERDA nada debe mutar el state original. ESTO solo le da formato de dinero
 const formatQuantity = (qty) => {
     return qty.toLocaleString('es-ES', {
         style: 'currency',
@@ -32,7 +31,6 @@ const formatQuantity = (qty) => {
     })
 }
 
-//resetea la app al hacer click en el boton, gracias al useEffect que dice que si expenses o budget cambia, lo sincroniza con
 const handleResetApp = () => {
     const result = confirm('Are you sure?')
     if (result) {

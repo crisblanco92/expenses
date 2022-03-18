@@ -8,7 +8,7 @@ const NewExpense = ({budget, setBudget, setIsValidBudget} ) => {
     const handleBudget = (e) => {
     e.preventDefault();
 
-        if(!budget || budget < 0) { //de text a number
+        if(!budget || budget < 0) { 
             setMessage('not a valid budget')
             return
         } 

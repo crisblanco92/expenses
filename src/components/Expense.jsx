@@ -31,7 +31,7 @@ const iconLibrary = {
 const Expense = ({exp, setEditExpense, deleteExpense}) => {
   const {category, name, qty, date, id} = exp
 
-  const leadingActions = () => ( //cambio las {} por () que quiere decir un return. es decir, muestra el siguiente componente
+  const leadingActions = () => ( 
     <LeadingActions>
       <SwipeAction onClick={() => setEditExpense(exp)}>
         Edit
@@ -59,7 +59,7 @@ const Expense = ({exp, setEditExpense, deleteExpense}) => {
         <div className="gastos">
           <div className="contenido-gasto">
               <img 
-                src={iconLibrary[category]} //al poner aqui que muestre la categoria del array, escribira ej. 'clay', entonces ira a clay y pintara el clay icon
+                src={iconLibrary[category]} 
                 alt="Expense icon" 
               
               />
